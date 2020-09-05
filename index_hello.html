@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="node_modules/react/umd/react.development.js"></script>
+    <script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="node_modules/babel-standalone/babel.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<!--创建根节点
+创建DOM根节点 一个页面需要有一个根节点这个节点下的内容会会别react管理
+-->
+<div  id="demoReact"></div>
+
+
+<script type="text/babel">
+    // jsx =javascript xml 是js的扩展
+    // 优点:
+    // 1执行效率更快
+    // 2他是类型安全的的,编译过程中就能及时发现错误
+    // 3 在使用jax的时候编写模版会更加简单和快捷
+
+    // 标签要规范符合w3c规范
+    let myDom=<h1>你好世界</h1>
+    ReactDOM.render(myDom, document.getElementById("demoReact"));
+
+</script>
+
+</body>
+</html>

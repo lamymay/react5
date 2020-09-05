@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="node_modules/react/umd/react.development.js"></script>
+    <script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="node_modules/babel-standalone/babel.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<!--创建根节点
+创建DOM根节点 一个页面需要有一个根节点这个节点下的内容会会别react管理
+-->
+<div id="demoReact"></div>
+
+
+<script type="text/babel">
+    // jsx =javascript + xml 是js的扩展
+    // 多行标签需要一个父标签
+
+    function fun1(obj) {
+        //return "name:" + obj.name + "--age:" + obj.age;
+        //ES6
+        return `name:${obj.name} --age: ${obj.age}`;
+    }
+
+    let msg = "你好"
+
+    let number = 100;
+    let user={        name:"张三",age:"100"    }
+
+    let myDom =
+        (<div>
+            <h1>msg:{msg}</h1>
+            <h1>number:  100 +1={number+1}</h1>
+            <h1>{fun1(user)}</h1>
+        </div>)
+
+
+    ReactDOM.render(myDom, document.getElementById("demoReact"));
+
+</script>
+</body>
+</html>
